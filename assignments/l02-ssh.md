@@ -4,18 +4,18 @@ Note: `directory` and `folder` are interchangeable in the following tasks.
 
 0. Your `Public and Private SSH keys` should live on your system at ~/.ssh/id_rsa.pub and ~/.ssh/id_rsa respectively.
 
-1. Your username is your BU email address without the `@bu.edu`. Copy your public SSH key to the virtual machine at `34.66.148.30`
+1. Your username is your BU email address without the `@bu.edu`. Copy your public SSH key to the virtual machine at `199.94.61.122`
    **Note: Replace `YOUR_NAME` with your actual BU username**
 
 ```bash
-ssh-copy-id -i ~/.ssh/id_rsa.pub YOUR_NAME@34.66.148.30
+ssh-copy-id -i ~/.ssh/id_rsa.pub YOUR_NAME@199.94.61.122
 # password: buedu
 ```
 
-2. SSH into the machine running at IP address `34.66.148.30`.
+2. SSH into the machine running at IP address `199.94.61.122`.
 
 ```bash
-ssh -i ~/.ssh/id_rsa YOURNAME@34.66.148.30
+ssh -i ~/.ssh/id_rsa YOURNAME@199.94.61.122
 ```
 
 3. Create a new directory `~/commandline-practice`..
