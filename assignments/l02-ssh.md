@@ -9,7 +9,7 @@ Note: `directory` and `folder` are interchangeable in the following tasks.
 
 ```bash
 ssh-copy-id -i ~/.ssh/id_rsa.pub YOUR_NAME@199.94.61.122
-# password: buedu
+# password: YOUR_PASSWORD
 ```
 
 2. SSH into the machine running at IP address `199.94.61.122`.
