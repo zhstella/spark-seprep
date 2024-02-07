@@ -2,19 +2,19 @@
 
 **Objective:**
 
-This assignment aims to enhance your version control skills by guiding you through setting up GitHub repositories, creating folders, submitting pull requests, and establishing an upstream repository.
+This assignment aims to enhance your version control skills by guiding you through setting up GitHub repositories, creating files, submitting pull requests, and establishing an upstream repository.
 
 **Instructions:**
 
 **1. GitHub Repository Setup:**
 
-   - Work within the `DS219/spark-seprep/assignments/assignment3` directory structure on GitHub.
+   - Work within the `DS219/spark-seprep/student-introduction` directory structure on GitHub.
 
-**3. Forking the Main Repository:**
+**2. Forking the Main Repository:**
 
    - Create a fork of the `DS219/spark-seprep` repository.
 
-**4. Cloning your Fork:**
+**3. Cloning your Fork:**
 
    - Clone your fork of the `DS219/spark-seprep` repository.
 
@@ -29,18 +29,7 @@ This assignment aims to enhance your version control skills by guiding you throu
    git remote add upstream  https://github.com/DS219/spark-seprep.git # if your SSH key is not set correctly in GH
    ```
 
-**5. Update your local main branch**
-
-   - Ensure your main branch is in sync with upstream/main, both locally and on GitHub.
-   - This step is crucial before starting any new work.
-
-   ```bash
-   git fetch --all
-   git rebase upstream/main
-   git push origin main
-   ```
-
-**File Creation:**
+**4. Create your File**
 
    - Create a markdown file in the `student-introduction/` folder with the following nomenclature: `yourname.md`. Take a look at the [example here.](https://github.com/DS219/spark-seprep/blob/main/student-introduction/aakanksha.md) 
    - Add a header using `#` and add your name.
@@ -57,7 +46,7 @@ This assignment aims to enhance your version control skills by guiding you throu
    git push origin assignment-3-branch
    ```
 
-**9. Final PR to Main Upstream:**
+**5. Final PR to Main Upstream:**
 
    - Submit a pull request to the main upstream repository (`DS219/spark-seprep`) containing the changes to `student-introduction/yourname.md`.
 
@@ -70,7 +59,7 @@ This assignment aims to enhance your version control skills by guiding you throu
 
 **Submission:**
 
-- Complete a series of pull requests within the GitHub repository.
+- Complete a pull request within the GitHub repository.
 - Ensure all steps are finished, including setting up upstream repositories, and submit the final pull request to the main upstream repository.
 
 This assignment not only enhances GitHub collaboration skills but also emphasizes effective communication and teamwork. If you have questions or need clarification, contact your instructor. Good luck and happy collaborating!
