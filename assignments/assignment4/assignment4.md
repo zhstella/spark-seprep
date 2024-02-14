@@ -15,28 +15,7 @@ Enhance version control skills and teamwork by collaborating with assigned teamm
 
 - Work within the `DS219/spark-seprep/assignments/assignment4` directory structure on GitHub.
 
-### 3. Forking the Main Repository:
-
-- Both `P1` and `P2` should create a fork of the `DS219/spark-seprep` repository.
-
-### 4. Cloning your Fork:
-
-- Both `P1` and `P2` should clone their fork of the `DS219/spark-seprep` repository.
-
-```bash
-mkdir -p ~/github
-cd ~/github
-git clone git@github.com:yourgh-name/spark-seprep.git  # If SSH key is set correctly in GH
-# or
-git clone https://github.com/yourgh-name/spark-seprep.git # If SSH key is not set correctly in GH
-cd spark-seprep
-git remote show -v
-git remote add upstream git@github.com:DS219/spark-seprep.git  # If SSH key is set correctly in GH
-# or
-git remote add upstream  https://github.com/DS219/spark-seprep.git # If SSH key is not set correctly in GH
-```
-
-### 5. Update your local main branch:
+### 3. Update your local main branch:
 
 - Ensure your local main branch is in sync with upstream/main before starting any new work.
 
@@ -46,11 +25,11 @@ git rebase upstream/main
 git push origin main
 ```
 
-### 6. Set Up Upstream Repository for P1 (Pointing to P2's Fork):
+### 4. Set Up Upstream Repository for P1 (Pointing to P2's Fork):
 
 - Open your terminal or command prompt.
 - Navigate to the directory where you want to work on your local repository, or create a new directory if needed.
-- Use the following command to add a remote named "p2_upstream" that points to your teammate P2's fork:
+- Use the following command to add a remote named **p2_upstream** that points to your teammate P2's fork:
 
    ```bash
    git remote add p2_upstream https://github.com/Teammate_P2_username/spark-seprep.git
@@ -64,23 +43,23 @@ git push origin main
    git remote -v
    ```
 
-   You should see "p2_upstream" listed as a remote with the URL pointing to P2's fork.
+   You should see **p2_upstream** listed as a remote with the URL pointing to P2's fork.
 
-### 7. Initiate PR to P2's fork:
+### 5. Initiate PR to P2's fork:
 
 - With the folder structure in place, P1 will add a new document to the team folder named `<Their Name>.md`. For instance, if P1 is Alice, the document should be named `Alice.md`.
 - After creating the document, P1 will submit a pull request to P2's fork (P2's upstream repository).
 
-### 8. P2 reviews and merges P1's PR on their fork:
+### 6. P2 reviews and merges P1's PR on their fork:
 
 - P2 should check if P1 has correctly created the folder with the suggested nomenclature.
 - Once everything looks good, merge the PR.
 
-### 9. Set Up Upstream Repository for P2 (Pointing to P1's Fork):
+### 7. Set Up Upstream Repository for P2 (Pointing to P1's Fork):
 
 - Using the instructions in Step 6, P2 repeats the step to create an upstream pointing to P1's fork.
 
-### 10. P2 initiates Pull Request (PR) to P1's Fork:
+### 8. P2 initiates Pull Request (PR) to P1's Fork:
 
 - Follow the same steps as described in P1's upstream repository setup, but replace P1's fork with P2's fork when adding the upstream remote and URL.
 -  P2 will initiate the collaboration by submitting a pull request to P1's fork (P1's upstream repository).
