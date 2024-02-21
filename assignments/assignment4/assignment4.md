@@ -2,7 +2,7 @@
 
 ## Deadline:
 
-Feb 28th 2024, 11:59 PM
+Feb 28th 2024, 4:00 PM
 
 ## Objective:
 
