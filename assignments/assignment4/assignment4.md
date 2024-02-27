@@ -1,5 +1,9 @@
 # Assignment 4 - Collaborative GitHub Project - Creating Team PRs
 
+## Deadline:
+
+Feb 28th 2024, 4:00 PM
+
 ## Objective:
 
 Enhance version control skills and teamwork by collaborating with assigned teammates to set up GitHub repositories, create folders, submit pull requests, and establish upstream repositories for P1 and P2.
@@ -14,60 +18,99 @@ Enhance version control skills and teamwork by collaborating with assigned teamm
 ### 2. GitHub Repository Setup:
 
 - Work within the `DS219/spark-seprep/assignments/assignment4` directory structure on GitHub.
+- Most students have cloned the class repository in their `$HOME` directory, so the following or something close to it should
+  bring most students to the root of the class repository:
 
-### 3. Update your local main branch:
+  ```bash
+  cd ~/github/spark-seprep
+  ```
+
+### 3. Update your local main branch (both P1 and P2):
 
 - Ensure your local main branch is in sync with upstream/main before starting any new work.
-
+- The following assumes you are currently working within the locally cloned spark-seprep repository.
+  
 ```bash
+git checkout main
 git fetch --all
 git rebase upstream/main
 git push origin main
 ```
 
-### 4. Set Up Upstream Repository for P1 (Pointing to P2's Fork):
+### 4. Set up working branches (Both P1 and P2):
 
-- Open your terminal or command prompt.
-- Navigate to the directory where you want to work on your local repository, or create a new directory if needed.
-- Use the following command to add a remote named **p2_upstream** that points to your teammate P2's fork:
+- The following assumes you are currently working within the locally cloned spark-seprep repository.
+- **Both** P1 and P2 create a new branch named `assignment4`
 
-   ```bash
-   git remote add p2_upstream https://github.com/Teammate_P2_username/spark-seprep.git
-   ```
+  ```
+  git checkout -b assignment4
+  git push origin assignment4
+  ```
 
-   Replace Teammate_P2_username with P2's GitHub username.
-   
-- Verify that the upstream repository has been added correctly:
+### 5. P1 initiate PR to P2's fork:
 
-   ```bash
-   git remote -v
-   ```
-
-   You should see **p2_upstream** listed as a remote with the URL pointing to P2's fork.
-
-### 5. Initiate PR to P2's fork:
-
-- With the folder structure in place, P1 will add a new document to the team folder named `<Their Name>.md`. For instance, if P1 is Alice, the document should be named `Alice.md`.
-- After creating the document, P1 will submit a pull request to P2's fork (P2's upstream repository).
-
+- P1 will create a folder with their team name in `assignments/assignment4` directory. Name the directory with your team number.
+  For example, P1 from Team3 should run the following:
+  
+  ```bash
+  mkdir assignments/assignment4/Team3  <-Replace "3" with your team number!
+  ```
+  
+- With the folder structure in place, P1 will add a new document to the team folder named `<Their Name>.md`.
+  For instance, if P1 is Alice, the document should be named `Alice.md`. **This file should be inside the team directory**
+- After creating the document, P1 will submit a pull request to P2's fork against P2's assignment4 branch.
+  For example, P1 from Team3 will do the following to push their new file to their fork:
+  
+  ```
+  git add assignments/assignment4/Team3
+  git commit -m "adding new file here"
+  git push origin assignment4
+  ```
+-  P1, after pushing the assignment4 branch to GitHub, and from the GitHub UI, choose P2's **assignment4** branch to contribute a PR against.
+  
 ### 6. P2 reviews and merges P1's PR on their fork:
 
 - P2 should check if P1 has correctly created the folder with the suggested nomenclature.
-- Once everything looks good, merge the PR.
+- **P2, Make sure P1 submitted the PR against the assignment4 branch, not your main branch!** If necessary, P2 can close the PR and tell P1 to
+  open a new PR against the correct branch.
+- Once everything looks good, P2 will merge the PR that P1 submitted against the `assignment4` branch.
 
-### 7. Set Up Upstream Repository for P2 (Pointing to P1's Fork):
+### 7. P2 initiates Pull Request (PR) to P1's Fork:
 
-- Using the instructions in Step 6, P2 repeats the step to create an upstream pointing to P1's fork.
+- The following assumes you are currently working within the locally cloned spark-seprep repository.
+- First, P2 must fetch and rebase locally (from the terminal) to pick up the changes that were merged in GitHub.
+  P2 do the following:
+  
+  ```
+  git branch <-confirm that you are still in assignment4 branch, if not, then run 'git checkout assignment4'
+  git fetch --all
+  git rebase origin/assignment4
+  ```
+  
+  Now, P2, your local copy of your assignment4 branch matches the branch you have just merged P1s work into in GitHub.
 
-### 8. P2 initiates Pull Request (PR) to P1's Fork:
-
-- Follow the same steps as described in P1's upstream repository setup, but replace P1's fork with P2's fork when adding the upstream remote and URL.
--  P2 will initiate the collaboration by submitting a pull request to P1's fork (P1's upstream repository).
--  P1 should review P2's pull request and merge it into their fork.
+- P2 will add a new document to the team folder named `assignments/assignment4/TeamX`. For example, if P2's name is Bob, the document should be `Bob.md`.
+  **This file should be inside the team directory.**
+- After creating the document, P2 will submit a pull request to P1's fork on their assignment4 branch.
+  First, P2 will do the following to push their new file to their fork.
+  For example, Bob, from P2 Team3, would do the following:
+  
+  ```
+  git add assignments/assignment4/Team3/Bob.md
+  git commit -m "adding new file here"
+  git push origin assignment4
+  ```
+  
+-  P2, after pushing the assignment4 branch to GitHub, and from the GitHub UI, choose P1's **assignment4** branch to contribute a PR against.
+- **P1, make sure P2 submitted the PR against your assignment4 branch, not your main branch!** If necessary, P1 can close the PR and tell P2 to
+  open a new PR against the correct branch.
+-  P1 should review P2's pull request and merge it into their assignment4 branch in GitHub.
 
 ### 9. Final PR to Main Upstream:
 
-- To complete the process, P1 will submit a pull request to the main upstream repository (`DS219/spark-seprep/assignments/assignment4`) containing the changes made by both teammates.
+- To complete the process, P1 will submit a pull request to the main upstream repository (`DS219/spark-seprep`) containing the changes 
+  made by both teammates. From the GitHub UI, open a PR and choose the DS219/main branch to contribute to, from your `assignment4` branch, that contains both
+  your commit as well as P2's commit.
 
 ## Important Notes:
 
