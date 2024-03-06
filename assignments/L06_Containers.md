@@ -78,6 +78,9 @@ Make sure to run your container image with podman to ensure it runs successfully
 podman run [image-name]
 ```
 
+Add your container image name to this doc https://docs.google.com/document/d/1_mJ-SAgSAZK23kNLbsonv8uKrhqK-o6bXNTV-V7vWik/edit?usp=sharing.
+Make sure it is the full qualified image name in the format **docker.io/[your-username]/[your-imagename]**.
+
 ## Run a classmate's container image locally
 
 Look through the doc above and pick a container image that one of your classmate's built. Pull it down and run it locally on your machine.
