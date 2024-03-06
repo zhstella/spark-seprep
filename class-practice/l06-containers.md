@@ -26,7 +26,7 @@ If this happens, open another terminal and run `podman stop --all`
 
 ```bash
 cd frontend
-podman build -t docker.io/yourname/pacman:latest -f docker/Dockerfile .
+podman build -t pacman:latest -f docker/Dockerfile .
 cd ../
 ```
 
@@ -36,13 +36,13 @@ vi windows-containerfile
 ```
 Add these lines to the windows-containerfile
 ```
-FROM docker.io/yourname/pacman:latest
+FROM pacman:latest
 RUN dnf -y install dos2unix
 RUN dos2unix /usr/local/bin/pacman.sh && chmod +x /usr/local/bin/pacman.sh
 ```
 Then run the following command to build your image
 ```
-podman build -t docker.io/yourname/pacman:latest -f windows-containerfile .
+podman build -t pacman:latest -f windows-containerfile .
 ```
 
 ## Run the built image
@@ -53,7 +53,7 @@ With `-p 8080:8080` port-forward port 8080 from the running container to port 80
 Name your container `pacman` to easily view the logs.
 
 ```bash
-podman run --rm -d -it --name pacman -p 8080:8080 docker.io/yourname/pacman:latest
+podman run --rm -d -it --name pacman -p 8080:8080 pacman:latest
 ```
 
 You can see the container logs by running:
@@ -78,6 +78,14 @@ To play `PACMAN`, head to your browser at `http://localhost:8080`
 * `EXTRA EXTRA CREDIT`: Configure the mongo database to keep records of games played with best scores. Explain how you did it.
 
 You can use Podman, Docker, or any other container build tool.
+
+## Push the built image to docker hub
+
+You can push the image built to your docker hub account if you want. Replace **<YOURUSERNAME>** with your docker hub username.
+
+```
+podman push pacman:latest docker.io/<YOURUSERNAME>/pacman:latest
+```
 
 **To clean up your system after running and building the pacman image (after you're done with the assignment):**
 
