@@ -53,7 +53,7 @@ With `-p 8080:8080` port-forward port 8080 from the running container to port 80
 Name your container `pacman` to easily view the logs.
 
 ```bash
-podman run --rm -d -it --name pacman -p 8080:8080 pacman:latest
+podman run --rm -d --name pacman -p 8080:8080 pacman:latest
 ```
 
 You can see the container logs by running:
