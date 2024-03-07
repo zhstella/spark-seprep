@@ -51,8 +51,8 @@ Look at https://github.com/DS219/spark-seprep/tree/main/assignments/containerfil
 ## Build and tag your container image
 
 ```
-$ cd assignments/containerfiles/[FIRSTNAME-LASTNAME]
-$ podman build -t [image-name] -f [path/to/containerfile] .
+cd assignments/containerfiles/[FIRSTNAME-LASTNAME]
+podman build -t [image-name] -f [path/to/containerfile] .
 ```
 
 ## Create a free account on Docker hub if you don't already have one
@@ -63,12 +63,12 @@ Head to Docker hub (https://hub.docker.com/) and create a free account there. Ma
 
 Login to the docker hub account you created above with podman and enter the username and password when prompted.
 ```
-$ podman login docker.io
+podman login docker.io
 ```
 
 Now you can push the image you built to your docker hub account.
 ```
-$ podman push [image-name] docker.io/[username]/[image-name]
+podman push [image-name] docker.io/[username]/[image-name]
 ```
 
 Add a link to your container image to this doc https://forms.gle/uY2vXxaLbhox4WF17
@@ -86,8 +86,14 @@ Make sure it is the full qualified image name in the format **docker.io/[your-us
 Look through the doc above and pick a container image that one of your classmate's built. Pull it down and run it locally on your machine.
 
 ```
-$ podman pull [classmate-image]
-$ podman run [classmate-image]
+podman pull [classmate-image]
+podman run [classmate-image]
 ```
 
 Create your PR on Github and answer the questions in this form https://forms.gle/uY2vXxaLbhox4WF17 and hit submit!
+
+**Note:** Always check the files that you are comitting in your working tree before actually comitting. For this assignment, you only need 2
+files - your Containerfile and your script. Do not commit any extra files. The following command will show you your working tree always.
+```
+git status
+```
