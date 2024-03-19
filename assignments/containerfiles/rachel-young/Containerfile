@@ -1,0 +1,5 @@
+FROM python:3.9
+WORKDIR /rachel-young
+ADD script.py /rachel-young
+RUN chmod +x /rachel-young/script.py
+CMD ["python3", "./script.py"]
