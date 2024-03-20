@@ -1,0 +1,15 @@
+# Use an Alpine Linux base image
+FROM alpine
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the script file into the container
+ADD assignment6.sh /app/
+
+# Make the script executable
+RUN chmod +x assignment6.sh
+
+# Set the command to execute the script
+CMD ./assignment6.sh
+
