@@ -1,0 +1,5 @@
+FROM alpine
+WORKDIR mydir
+ADD message.sh /mydir
+RUN chmod +x /mydir/message.sh
+CMD ./message.sh
