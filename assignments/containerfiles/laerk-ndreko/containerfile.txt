@@ -1,0 +1,6 @@
+FROM alpine
+WORKDIR laerk-ndreko
+ADD script.txt /laerk-ndreko
+RUN chmod +x /laerk-ndreko/script.txt
+RUN apk add curl
+CMD ./script.txt
