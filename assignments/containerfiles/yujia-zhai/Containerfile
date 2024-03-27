@@ -1,0 +1,8 @@
+FROM alpine
+WORKDIR mydir
+ADD integer.sh /mydir
+RUN chmod +x /mydir/integer.sh
+RUN apk add curl
+CMD ./integer.sh
+
+
