@@ -1,0 +1,4 @@
+FROM node:18-alpine
+WORKDIR mydir
+ADD script.js /mydir
+CMD ["node", "script.js"]

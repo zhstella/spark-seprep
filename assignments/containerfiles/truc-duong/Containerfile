@@ -1,0 +1,6 @@
+FROM alpine
+WORKDIR mydir
+ADD greetings.sh /mydir
+RUN chmod +x /mydir/greetings.sh
+RUN apk add curl
+CMD ./greetings.sh

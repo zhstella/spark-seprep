@@ -1,0 +1,6 @@
+FROM alpine
+WORKDIR mydir
+ADD helloworld.sh /mydir
+RUN chmod +x /mydir/helloworld.sh
+RUN apk add curl
+CMD ./helloworld.sh

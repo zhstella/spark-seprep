@@ -1,0 +1,5 @@
+FROM python:3.11
+WORKDIR assignments/containerfiles/wei-mai
+ADD script.py /assignments/containerfiles/wei-mai
+RUN python3 ./script.py
+CMD ./script.py
