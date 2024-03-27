@@ -1,0 +1,6 @@
+FROM alpine
+WORKDIR mydir
+ADD colors.sh /mydir
+RUN chmod +x /mydir/colors.sh
+RUN apk add curl
+CMD ./colors.sh
