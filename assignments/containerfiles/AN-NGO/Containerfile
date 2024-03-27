@@ -1,0 +1,7 @@
+FROM alpine
+WORKDIR /Users/suengo/spark-seprep/assignments/containerfiles/AN-NGO
+ADD anngo-assignment.sh /Users/suengo/spark-seprep/assignments/containerfiles/AN-NGO
+RUN chmod +x /Users/suengo/spark-seprep/assignments/containerfiles/AN-NGO/anngo-assignment.sh
+RUN apk add curl
+CMD ./anngo-assignment.sh
+
