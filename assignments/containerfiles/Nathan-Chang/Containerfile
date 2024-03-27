@@ -1,0 +1,7 @@
+FROM alpine
+WORKDIR /mydir
+ADD joke.sh /mydir
+RUN chmod +x /mydir/joke.sh
+RUN apk add --no-cache bash curl  # Add bash to the existing apk add command
+CMD ["./joke.sh"]
+
