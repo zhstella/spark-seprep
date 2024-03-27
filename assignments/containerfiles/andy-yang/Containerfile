@@ -1,0 +1,5 @@
+FROM alpine
+WORKDIR mydir
+ADD myprogram.sh /mydir
+RUN chmod +x /mydir/myprogram.sh
+CMD ./myprogram.sh
