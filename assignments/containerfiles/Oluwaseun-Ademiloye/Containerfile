@@ -1,0 +1,4 @@
+FROM python
+COPY avg_calculator.py .
+RUN chmod +x avg_calculator.py
+CMD python avg_calculator.py
