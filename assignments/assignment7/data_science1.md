@@ -1,4 +1,4 @@
-### Assignment 5: Data Science 101
+### Assignment 7: Data Science 101
 
 #### Title: Exploratory Data Analysis (EDA) and Hypothesis Testing
 
@@ -84,4 +84,15 @@ df = pd.read_csv(url)
 
 
 #### How to Submit:
-Create a fork of the repository, add a new branch for this assignment and then create a folder here [https://github.com/DS219/spark-seprep/tree/main/assignments/assignment7/](https://github.com/DS219/spark-seprep/tree/main/assignments/assignment7/) with your name, and add the dataset you choose and jupyter notebook in this folder. After adding it your fork, make a pull request to the upstream repository.
+
+Ensure that you are up to date with the upstream Github repo. Do the following before starting your assignment.
+
+```
+cd <to your github repo path>
+git checkout main
+git fetch upstream
+git rebase upstream/main
+git checkout -b [new branch] upstream/main
+```
+
+Create a folder here [https://github.com/DS219/spark-seprep/tree/main/assignments/assignment7/](https://github.com/DS219/spark-seprep/tree/main/assignments/assignment7/) with your name, and add the dataset you choose and jupyter notebook in this folder. After adding it your branch, make a pull request to the upstream repository.
