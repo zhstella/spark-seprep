@@ -21,3 +21,11 @@ Create `<yourname>.md` file in the [assignment8 folder](https://github.com/DS219
 * Add a terminal screenshot of the server hosted on your machine. (Make sure your username is clearly visible on the screenshot for full credit)
 *  Add a streamlit UI screenshot with an audio transcription.
 *  Add notes and challenges your faced along the way and also add any improvements and suggestions to the process.
+
+## Demo
+
+In the final lecture on May 1st, you demo this to the class with your own audio and streamlit UI.
+
+##### Note:
+
+You don't have to change any code just run all the steps and execute the code just with your own audio. 
