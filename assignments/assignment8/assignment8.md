@@ -15,7 +15,7 @@ git clone git@github.com:<add_your_githb_username_here>/whisper-self-hosted-llm.
 
 ## Submission
 
-Create `<yourname>.md` file in the assignment8 folder and make a PR to the upstream. In this file add the following :
+Create `<yourname>.md` file in the [assignment8 folder](https://github.com/DS219/spark-seprep/tree/main/assignments/assignment8) and make a PR to the upstream. In this file add the following :
 
  
 * Add a terminal screenshot of the server hosted on your machine. (Make sure your username is clearly visible on the screenshot for full credit)
