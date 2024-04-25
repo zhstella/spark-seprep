@@ -1,0 +1,6 @@
+FROM alpine
+WORKDIR /AJANI-HICKLING
+ADD echo_test.sh /AJANI-HICKLING
+RUN chmod +x /AJANI-HICKLING/echo_test.sh
+RUN apk add curl
+CMD ./echo_test.sh

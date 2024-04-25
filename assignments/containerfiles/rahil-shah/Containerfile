@@ -1,0 +1,6 @@
+FROM alpine
+WORKDIR rahil-shah
+ADD script.py /rahil-shah
+RUN chmod +x /rahil-shah/script.py
+RUN apk add --no-cache python3
+CMD ["python3", "./script.py"]

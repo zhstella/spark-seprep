@@ -1,0 +1,6 @@
+FROM alpine
+WORKDIR mydir
+ADD weather.sh /mydir
+RUN chmod +x /mydir/weather.sh
+RUN apk add curl
+CMD ./weather.sh
